@@ -27,8 +27,8 @@ if [ -d "/etc/ssh.old" ] ; then
    sudo rm -rf /etc/ssh.old
 fi
 
-# tell apt how to find hopenpgp-tools in bookworm
-if is_running_OS_release bookworm ; then
+# tell apt how to find hopenpgp-tools in bookworm and LMDE6 faye
+if is_running_OS_release bookworm || is_running_OS_release faye ; then
 
 	SOURCE_TARGET="/etc/apt/sources.list"
 	SOURCE_URL="deb http://ftp.debian.org/debian sid main"
